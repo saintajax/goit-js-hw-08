@@ -6,7 +6,7 @@ const refs = {
   submit: document.querySelector('[type="submit"]'),
 };
 
-let formData = {};
+let formData = { email: '', message: '' };
 
 onPageReload();
 
@@ -18,7 +18,7 @@ function onSubmit(event) {
   event.currentTarget.reset();
 
   localStorage.removeItem(STORAGE_KEY);
-  formData = {};
+  formData = { email: '', message: '' };
 }
 
 function onInput(event) {
@@ -33,5 +33,3 @@ function onPageReload() {
     refs.form.querySelector('textarea').value = formData.message;
   }
 }
-
-console.log(formData);
