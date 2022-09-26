@@ -16,7 +16,7 @@ refs.form.addEventListener('submit', onSubmit);
 function onSubmit(event) {
   event.preventDefault();
   event.currentTarget.reset();
-
+  console.log(formData);
   localStorage.removeItem(STORAGE_KEY);
   formData = { email: '', message: '' };
 }
